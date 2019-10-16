@@ -20,7 +20,7 @@ nav {
 
 .App-header {
   background-color: #282c34;
-  min-height: 90vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center; /* aligned items horizontally if flex-direction is Column */
@@ -32,4 +32,61 @@ nav {
 
 .App-link {
   color: #09d3ac;
+}
+
+.currentWeatherWrapper {
+  background-color: #282c34;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* aligned items horizontally if flex-direction is Column */
+  justify-content: center;
+  font-size: calc(20px + 2vmin);
+  font-weight: 100;
+  color: rgb(203, 239, 250);
+}
+
+.currentWeather {
+  text-align: left;
+}
+
+.currentTemp {
+  font-size: calc(80px + 2vmin);
+}
+
+.degreesFarenheit {
+  font-size: calc(18px + 2vmin);
+}
+
+.currentWeatherBackgroundImage {
+  background-image: url("./images/RainyDay.jpg");
+  /* height: 660px;  */
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #2d2d2e;
+  background-blend-mode: overlay;
+}
+
+.currentWeatherBackgroundImage::after {
+  background-color: #333436;
+  z-index: -1;
+}
+
+.futureForecastWrapper {
+  background-color: #282c34;
+  min-height: 30vh;
+  min-width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* aligned items horizontally if flex-direction is Column */
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  font-weight: 100;
+  color: rgb(203, 239, 250);
+}
+
+.futureForecast span {
+  margin: 5px;
 }
