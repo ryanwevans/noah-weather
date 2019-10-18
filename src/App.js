@@ -12,11 +12,12 @@ function App() {
       </header>
       <div className="currentWeatherWrapper currentWeatherBackgroundImage">
         <div className="currentTemp">
-          57&#176;
+          57&#176;f
         </div>
         <div className="currentWeather">
-          <span>Raining</span><br/>
-          <span>Wind Speed: 18mph</span>
+          <span className="currentWeatherDescription">Rain</span><br/>
+          <span>Wind: 18mph</span><br/>
+          <span>Feels Like: 48&#176;f</span>
         </div>
       </div>
       <div className="futureForecastWrapper">

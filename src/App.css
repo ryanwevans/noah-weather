@@ -2,13 +2,13 @@
   text-align: center;
 }
 
-.App-logo {
+/* .App-logo {
   height: 40vmin;
-}
+} */
 
 nav {
   background-color: #282c34;
-  min-height: 10vh;
+  min-height: 5vh;
   display: flex;
   flex-direction: row;
   align-items: center; /* aligned title vertically if flex-direction is Row */
@@ -24,7 +24,7 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center; /* aligned items horizontally if flex-direction is Column */
-  /* justify-content: center; */
+  justify-content: center;
   font-size: calc(10px + 2vmin);
   font-weight: 100;
   color: rgb(203, 239, 250);
@@ -36,9 +36,9 @@ nav {
 
 .currentWeatherWrapper {
   background-color: #282c34;
-  min-height: 50vh;
+  min-height: 65vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center; /* aligned items horizontally if flex-direction is Column */
   justify-content: center;
   font-size: calc(20px + 2vmin);
@@ -48,10 +48,18 @@ nav {
 
 .currentWeather {
   text-align: left;
+  font-size: calc(20px + 2vmin);
+  padding-left: 1em;
+}
+
+.currentWeatherDescription {
+  font-size: calc(40px + 2vmin);
+  font-weight: 200;
+  font-variant-caps: all-small-caps;
 }
 
 .currentTemp {
-  font-size: calc(80px + 2vmin);
+  font-size: calc(150px + 2vmin);
 }
 
 .degreesFarenheit {
@@ -76,7 +84,7 @@ nav {
 
 .futureForecastWrapper {
   background-color: #282c34;
-  min-height: 30vh;
+  min-height: 20vh;
   min-width: 100%;
   display: flex;
   flex-direction: row;
