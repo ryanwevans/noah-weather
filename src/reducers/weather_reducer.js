@@ -3,16 +3,19 @@ export default function weatherReducer( state = {
     weather: []
 }, action) {
     switch(action.type) {
-        case 'LOADING WEATHER':
+        case 'LOADING_WEATHER':
             return {
                 ...state, loading: true
             };
 
-        case 'FETCH WEATHER':
+        case 'FETCH_WEATHER':
+
+            console.log(action)
+
             return {
                 ...state,
                 loading: false,
-                weather: action.payload
+                weather: action
             };
 
         default:

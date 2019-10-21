@@ -1,6 +1,7 @@
 import React from 'react';
 
-function CurrentWeather() {
+function CurrentWeather(props) {
+    // console.log(props.weather)
     return (
         <div className="currentWeatherWrapper currentWeatherBackgroundImage">
         <div className="currentTemp">
