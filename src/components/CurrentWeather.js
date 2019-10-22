@@ -21,7 +21,7 @@ class CurrentWeather extends Component {
     
     // Lines 25, 29-31 check whether variables are defined when page loads; if undefined, will display nothing and then display values when assigned
     return (
-        <div className="currentWeatherWrapper currentWeatherBackgroundImage">
+      <div className="currentWeatherWrapper currentWeatherBackgroundImage">
         <div className="currentTemp">
           {temperature && roundedTemp} &#176;f
         </div>

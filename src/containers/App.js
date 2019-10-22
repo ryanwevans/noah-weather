@@ -15,14 +15,14 @@ class App extends Component {
   
   
   render() {
-    console.log(this.props.weather)
+    console.log(this.props.dailySummary)
     return (
       <div className="App">
         <nav>Noah</nav>
         <header className="App-header">
           <LocationSearch />
         </header>
-          <CurrentWeather currentWeather={this.props.weather} />
+          <CurrentWeather currentWeather={this.props.weather} summary={this.props.dailySummary} />
           <FutureWeather />
       </div>
     );
@@ -32,7 +32,8 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return({
-    weather: state.weather.weather
+    weather: state.weather.currentWeather,
+    dailySummary: state.weather.dailySummary
   })
 }
 
