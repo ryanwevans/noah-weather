@@ -4,6 +4,7 @@ class CurrentWeather extends Component {
 
   render() {
     
+    // Destucture for readability and DRY
     const { 
       temperature, 
       summary, 
@@ -12,11 +13,13 @@ class CurrentWeather extends Component {
       windGust 
     } = this.props.currentWeather;
     
+    // Round data from two decimal places to whole numbers for display
     const roundedTemp = Math.round(temperature);
     const roundedApparentTemp = Math.round(apparentTemperature);
     const roundedWindSpeed = Math.round(windSpeed)
     const roundedWindGust = Math.round(windGust)
     
+    // Lines 25, 29-31 check whether variables are defined when page loads; if undefined, will display nothing and then display values when assigned
     return (
         <div className="currentWeatherWrapper currentWeatherBackgroundImage">
         <div className="currentTemp">
