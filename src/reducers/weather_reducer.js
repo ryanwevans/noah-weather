@@ -10,12 +10,12 @@ export default function weatherReducer( state = {
 
         case 'FETCH_WEATHER':
 
-            console.log(action)
+            console.log(action.payload.currently)
 
             return {
                 ...state,
                 loading: false,
-                weather: action
+                weather: action.payload.currently
             };
 
         default:

@@ -11,8 +11,7 @@ export default function getWeather() {
         dispatch( {type: 'LOADING_WEATHER'} )
         return fetch(proxyurl + url)
         .then(res => res.json())
-        .then(weatherData => console.log(weatherData)
-            // dispatch( {type: 'FETCH_WEATHER', payload: weatherData} ))
+        .then(weatherData => dispatch( {type: 'FETCH_WEATHER', payload: weatherData} ))
         // .catch(error => console.log(error))
-        )}
+    }
 }

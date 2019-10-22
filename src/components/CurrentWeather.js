@@ -1,19 +1,36 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-function CurrentWeather(props) {
-    // console.log(props.weather)
+class CurrentWeather extends Component {
+
+  render() {
+    
+    const { 
+      temperature, 
+      summary, 
+      apparentTemperature, 
+      windSpeed, 
+      windGust 
+    } = this.props.currentWeather;
+    
+    const roundedTemp = Math.round(temperature);
+    const roundedApparentTemp = Math.round(apparentTemperature);
+    const roundedWindSpeed = Math.round(windSpeed)
+    const roundedWindGust = Math.round(windGust)
+    
     return (
         <div className="currentWeatherWrapper currentWeatherBackgroundImage">
         <div className="currentTemp">
-          57&#176;f
+          {temperature && roundedTemp} &#176;f
         </div>
         <div className="currentWeather">
-          <span className="currentWeatherDescription">Rain</span><br/>
-          <span>Wind: 18mph</span><br/>
-          <span>Feels Like: 48&#176;f</span>
+          <span className="currentWeatherDescription">{summary}</span><br/>
+          <span>Wind: {windSpeed && roundedWindSpeed} mph</span><br/>
+          <span>Gusts: {windGust && roundedWindGust} mph</span><br/>
+          <span>Feels Like: {apparentTemperature && roundedApparentTemp}&#176;f</span>
         </div>
       </div>
     );
+  }
 }
 
 export default CurrentWeather;

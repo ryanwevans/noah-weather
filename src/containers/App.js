@@ -22,7 +22,7 @@ class App extends Component {
         <header className="App-header">
           <LocationSearch />
         </header>
-          <CurrentWeather weather={this.props.weather} />
+          <CurrentWeather currentWeather={this.props.weather} />
           <FutureWeather />
       </div>
     );
@@ -32,7 +32,7 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return({
-    weather: state.weather
+    weather: state.weather.weather
   })
 }
 
