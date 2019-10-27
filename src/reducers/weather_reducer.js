@@ -13,7 +13,6 @@ export default function weatherReducer( state = {
 
         case 'FETCH_WEATHER':
 
-            console.log(action.payload.daily.summary)
             // returns state as is, but updates with any provided data, updates 'loading' to 'false'
             return {
                 ...state,

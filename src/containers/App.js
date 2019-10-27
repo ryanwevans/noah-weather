@@ -8,14 +8,12 @@ import FutureWeather from '../components/FutureWeather';
 import getWeather from '../actions/weather'
 
 class App extends Component {
-
+  
   componentDidMount() {
     this.props.getWeather()
   }
   
-  
   render() {
-    console.log(this.props.dailySummary)
     return (
       <div className="App">
         <nav>Noah</nav>
@@ -37,4 +35,4 @@ const mapStateToProps = state => {
   })
 }
 
-export default connect(mapStateToProps, {getWeather})(App);
+export default (connect(mapStateToProps, {getWeather}))(App);

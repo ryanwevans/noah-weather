@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import { usePosition } from 'use-position';
 
 class CurrentWeather extends Component {
-
   render() {
-    
+
+    const { latitude, longitude } = usePosition();
+    console.log(latitude, longitude)
+
     // Destucture for readability and DRY
     const { 
       temperature, 

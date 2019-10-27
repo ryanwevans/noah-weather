@@ -1,11 +1,16 @@
 export default function getWeather() {
+    
+    // const latitude = navigator.geolocation.getCurrentPosition( position => {
+    //     position.coords.latitude.toFixed(6);
+    //   })
+    
+    const API_URL = process.env.REACT_APP_DARK_SKY_API_URL
+    const API_KEY = process.env.REACT_APP_DARK_SKY_API_KEY
 
-    // const API_URL = process.env.DARK_SKY_API_URL
-    // const API_KEY = process.env.DARK_SKY_API_KEY
-
-    // const Fetch_API = API_URL + '/' + API_KEY + '/' + latitude + ',' + longitude
-    const proxyurl = "https://cors-anywhere.herokuapp.com/";
-    const url = 'https://api.darksky.net/forecast/7bad7a6da40f4bf9483d66ab0e9930fc/48.764517,-122.419848'
+    const proxyurl = 'https://cors-anywhere.herokuapp.com/';
+    const url = `${API_URL}${API_KEY}/48.764517,-122.419848`
+    
+    // const Fetch_API = API_URL + API_KEY + coords
 
     return dispatch => {
         dispatch( {type: 'LOADING_WEATHER'} )
