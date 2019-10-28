@@ -1,6 +1,6 @@
 import React from 'react';
 import { usePosition } from 'use-position';
-import Geocoder from 'react-native-geocoding';
+// import Geocoder from 'react-native-geocoding';
 
 function CurrentWeather(props) {
 
@@ -9,7 +9,16 @@ function CurrentWeather(props) {
   const roundedLatitude = latitude && latitude.toFixed(6)
   const roundedLongitude = longitude && longitude.toFixed(6)
   console.log(roundedLatitude, roundedLongitude)
-  
+
+  // To add feature: Add this reverse lookup of lat, long to find location name
+  // Geocoder.init("xxxxxxxxxxxxxxxxxxxxxxxxx");
+
+  // Geocoder.from(roundedLatitude, roundedLongitude)
+  //       .then(json => {
+  //       		var addressComponent = json.results[0].address_components[0];
+  //           console.log(addressComponent);
+  //       })
+  //       .catch(error => console.warn(error));
 
 
   // Destucture for readability and DRY

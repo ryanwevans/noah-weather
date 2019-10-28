@@ -13,7 +13,7 @@ nav {
   flex-direction: row;
   align-items: center; /* aligned title vertically if flex-direction is Row */
   justify-content: center; /* aligned title horizontally if flex-direction is Row */
-  font-size: calc(18px + 2vmin);
+  font-size: calc(30px + 2vmin);
   color: rgb(203, 239, 250);
   font-family: 'Petit Formal Script', cursive;
 }
@@ -25,7 +25,8 @@ nav {
   flex-direction: column;
   align-items: center; /* aligned items horizontally if flex-direction is Column */
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* font-variant-caps: all-small-caps; */
+  font-size: calc(8px + 2vmin);
   font-weight: 100;
   color: rgb(203, 239, 250);
 }
