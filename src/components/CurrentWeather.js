@@ -4,7 +4,11 @@ import { usePosition } from 'use-position';
 function CurrentWeather(props) {
 
   const { latitude, longitude } = usePosition();
-  console.log(latitude, longitude)
+  // Add call here to getWeather(lat, long)? in order to load weather data? instead of in componentDidMount in App.js?
+  const roundedLatitude = latitude && latitude.toFixed(6)
+  const roundedLongitude = longitude && longitude.toFixed(6)
+  console.log(roundedLatitude, roundedLongitude)
+
 
   // Destucture for readability and DRY
   const { 
