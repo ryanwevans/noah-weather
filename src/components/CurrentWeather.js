@@ -1,5 +1,6 @@
 import React from 'react';
 import { usePosition } from 'use-position';
+import Geocoder from 'react-native-geocoding';
 
 function CurrentWeather(props) {
 
@@ -8,6 +9,7 @@ function CurrentWeather(props) {
   const roundedLatitude = latitude && latitude.toFixed(6)
   const roundedLongitude = longitude && longitude.toFixed(6)
   console.log(roundedLatitude, roundedLongitude)
+  
 
 
   // Destucture for readability and DRY
@@ -25,7 +27,7 @@ function CurrentWeather(props) {
   const roundedWindSpeed = Math.round(windSpeed)
   const roundedWindGust = Math.round(windGust)
   
-  // Lines 25, 29-31 check whether variables are defined when page loads; if undefined, will display nothing and then display values when assigned
+  // Adding '&&' below checks whether variables are defined when page loads; if undefined, will display nothing and then display values when assigned
   return (
     <div className="currentWeatherWrapper currentWeatherBackgroundImage">
       <div className="currentTemp">
