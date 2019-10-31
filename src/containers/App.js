@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import '../App.css';
 import LocationSearch from '../LocationSearch';
-import CurrentWeather from '../components/CurrentWeather';
+import CurrentWeather from './CurrentWeather';
 import FutureWeather from '../components/FutureWeather';
 
 import getWeather from '../actions/weather'
 
 class App extends Component {
-  
+
   componentDidMount() {
     this.props.getWeather()
   }
