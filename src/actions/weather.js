@@ -1,6 +1,7 @@
 function getWeather() {
-    // let latitude = ''
-    // let longitude = ''
+
+    let latitudeCoord = ''
+    let longitudeCoord = ''
 
     function geolocate() {
         if (window.navigator && window.navigator.geolocation) {
@@ -8,12 +9,14 @@ function getWeather() {
         }
     }
     
-    function onGeolocateSuccess(coordinates) {
-        let latitude = coordinates.coords.latitude;
-        let longitude = coordinates.coords.longitude;
-        console.log(latitude, longitude)
+    const onGeolocateSuccess = (coordinates) => {
+        latitudeCoord = coordinates.coords.latitude
+        longitudeCoord = coordinates.coords.longitude
+        console.log(latitudeCoord, longitudeCoord)
     }
 
+    console.log(latitudeCoord, longitudeCoord)
+ 
     function onGeolocateError(error) {
         switch (error.code) {
             case error.PERMISSION_DENIED:
@@ -34,7 +37,7 @@ function getWeather() {
     }
 
     geolocate();
-
+    
     const API_URL = process.env.REACT_APP_DARK_SKY_API_URL
     const API_KEY = process.env.REACT_APP_DARK_SKY_API_KEY
     
