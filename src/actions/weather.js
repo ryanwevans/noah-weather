@@ -1,6 +1,6 @@
 function getWeather() {
-    let latitude = ''
-    let longitude = ''
+    // let latitude = ''
+    // let longitude = ''
 
     function geolocate() {
         if (window.navigator && window.navigator.geolocation) {
@@ -9,8 +9,9 @@ function getWeather() {
     }
     
     function onGeolocateSuccess(coordinates) {
-        latitude = coordinates.coords.latitude;
-        longitude = coordinates.coords.longitude;
+        let latitude = coordinates.coords.latitude;
+        let longitude = coordinates.coords.longitude;
+        console.log(latitude, longitude)
     }
 
     function onGeolocateError(error) {
@@ -33,7 +34,6 @@ function getWeather() {
     }
 
     geolocate();
-
 
     const API_URL = process.env.REACT_APP_DARK_SKY_API_URL
     const API_KEY = process.env.REACT_APP_DARK_SKY_API_KEY
