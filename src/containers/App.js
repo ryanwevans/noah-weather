@@ -10,7 +10,12 @@ import getWeather from '../actions/weather'
 class App extends Component {
 
   componentDidMount() {
-    this.props.getWeather()
+    navigator.geolocation.getCurrentPosition(function(position) {
+      const latitude = position.coords.latitude.toFixed(6)
+      const longitude = position.coords.longitude.toFixed(6)
+      getWeather(latitude, longitude);
+    });
+    
   }
   
   render() {

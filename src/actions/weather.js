@@ -1,49 +1,45 @@
-function getWeather() {
+// const geolocate = () => {
+//     if (window.navigator && window.navigator.geolocation) {
+//         navigator.geolocation.getCurrentPosition(onGeolocateSuccess, onGeolocateError);
+//     }
+// }
 
-    let latitudeCoord = ''
-    let longitudeCoord = ''
 
-    function geolocate() {
-        if (window.navigator && window.navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(onGeolocateSuccess, onGeolocateError);
-        }
-    }
-    
-    const onGeolocateSuccess = (coordinates) => {
-        latitudeCoord = coordinates.coords.latitude
-        longitudeCoord = coordinates.coords.longitude
-        console.log(latitudeCoord, longitudeCoord)
-    }
+// const onGeolocateSuccess = (coordinates) => {
+//     console.log(`${coordinates.coords.latitude}, ${coordinates.coords.longitude}`)
+//     return(coordinates.coords.latitude, coordinates.coords.longitude)
+// }
 
-    console.log(latitudeCoord, longitudeCoord)
- 
-    function onGeolocateError(error) {
-        switch (error.code) {
-            case error.PERMISSION_DENIED:
-                alert('Permission was denied');
-                break;
-            case error.POSITION_UNAVAILABLE:
-                alert('Position is currently unavailable.');
-                break;
-            case error.PERMISSION_DENIED_TIMEOUT:
-                alert('User took to long to grant/deny permission.');
-                break;
-            case error.UNKNOWN_ERROR:
-                alert('An unknown error occurred.')
-                break;
-            default:
-                alert('Something went wrong...')
-        }
-    }
 
-    geolocate();
-    
+// const onGeolocateError = (error) => {
+//     switch (error.code) {
+//         case error.PERMISSION_DENIED:
+//             alert('Permission was denied');
+//             break;
+//         case error.POSITION_UNAVAILABLE:
+//             alert('Position is currently unavailable.');
+//             break;
+//         case error.PERMISSION_DENIED_TIMEOUT:
+//             alert('User took to long to grant/deny permission.');
+//             break;
+//         case error.UNKNOWN_ERROR:
+//             alert('An unknown error occurred.')
+//             break;
+//         default:
+//             alert('Something went wrong...')
+//     }
+// }
+
+
+const getWeather = (latitude, longitude) => {
     const API_URL = process.env.REACT_APP_DARK_SKY_API_URL
     const API_KEY = process.env.REACT_APP_DARK_SKY_API_KEY
-    
     const proxyurl = 'https://cors-anywhere.herokuapp.com/';
-    const url = `${API_URL}${API_KEY}/48.764517,-122.419848`
-    // let url = `${API_URL}${API_KEY}/${latitude},${longitude}`
+    // const url = `${API_URL}${API_KEY}/48.764517,-122.419848`
+    const url = `${API_URL}${API_KEY}/${latitude},${longitude}`
+
+    console.log(latitude, longitude)
+    console.log(proxyurl + url)
     
     return dispatch => {
         dispatch( {type: 'LOADING_WEATHER'} )
