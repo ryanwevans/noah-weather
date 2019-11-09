@@ -1,6 +1,6 @@
 import React from 'react';
 
-function LocationSearch(props) {
+function LocationSummary(props) {
   // const { summary } = this.props;
 
   return (
@@ -10,4 +10,4 @@ function LocationSearch(props) {
   );
 }
 
-export default LocationSearch;
+export default LocationSummary;

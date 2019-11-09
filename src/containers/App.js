@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import '../App.css';
-import LocationSearch from '../LocationSearch';
+import LocationSummary from '../LocationSummary';
 import CurrentWeather from './CurrentWeather';
 import FutureWeather from '../components/FutureWeather';
 
@@ -18,9 +18,6 @@ class App extends Component {
        longitude = position.coords.longitude.toFixed(6)
        this.props.getWeather(latitude, longitude);
     })
-    console.log(latitude)
-    
-    // this.props.getWeather();
   }
   
   render() {
@@ -28,7 +25,7 @@ class App extends Component {
       <div className="App">
         <nav>Noah</nav>
         <header className="App-header">
-          <LocationSearch summary={this.props.dailySummary} />
+          <LocationSummary summary={this.props.dailySummary} />
         </header>
           <CurrentWeather currentWeather={this.props.weather} />
           <FutureWeather />
@@ -39,6 +36,7 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return({
+    loading: state.weather.loading,
     weather: state.weather.currentWeather,
     dailySummary: state.weather.dailySummary
   })
