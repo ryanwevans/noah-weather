@@ -2,13 +2,14 @@ function getWeather(latitude, longitude) {
     const API_URL = process.env.REACT_APP_DARK_SKY_API_URL
     const API_KEY = process.env.REACT_APP_DARK_SKY_API_KEY
     const proxyurl = 'https://cors-anywhere.herokuapp.com/';
-    // const url = `${API_URL}${API_KEY}/48.764517,-122.419848`
     const url = `${API_URL}${API_KEY}/${latitude},${longitude}`
+    // Hard-coded latitude and longitude values for early testing:
+    // const url = `${API_URL}${API_KEY}/48.764517,-122.419848`
 
-    console.log(latitude, longitude)
-    console.log(proxyurl + url)
+    console.log('logging from within getWeather')
     
     return (dispatch) => {
+        console.log('logging from within getWeather')
         dispatch( {type: 'LOADING_WEATHER'} )
         return fetch(proxyurl + url)
         .then(res => res.json())

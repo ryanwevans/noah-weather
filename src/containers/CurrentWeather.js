@@ -1,13 +1,7 @@
 import React, { Component } from 'react';
-// import { usePosition } from 'use-position';
 
 class CurrentWeather extends Component {
-
-    // const { latitude, longitude } = usePosition();
-    // const roundedLatitude = latitude && latitude.toFixed(6)
-    // const roundedLongitude = longitude && longitude.toFixed(6)
-    // console.log(roundedLatitude, roundedLongitude)
-
+  
   render() {
     // Destucture for readability and DRY
     const { 

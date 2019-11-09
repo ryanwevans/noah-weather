@@ -7,15 +7,20 @@ import FutureWeather from '../components/FutureWeather';
 
 import getWeather from '../actions/weather'
 
-class App extends Component {
 
-  componentDidMount() {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      const latitude = position.coords.latitude.toFixed(6)
-      const longitude = position.coords.longitude.toFixed(6)
-      getWeather(latitude, longitude);
-    });
+class App extends Component {
+  
+  componentDidMount = () => {
+    let latitude
+    let longitude
+    navigator.geolocation.getCurrentPosition(position => {
+       latitude = position.coords.latitude.toFixed(6)
+       longitude = position.coords.longitude.toFixed(6)
+       this.props.getWeather(latitude, longitude);
+    })
+    console.log(latitude)
     
+    // this.props.getWeather();
   }
   
   render() {
@@ -29,7 +34,6 @@ class App extends Component {
           <FutureWeather />
       </div>
     );
-
   }
 }
 
@@ -40,4 +44,4 @@ const mapStateToProps = state => {
   })
 }
 
-export default (connect(mapStateToProps, {getWeather}))(App);
+export default (connect(mapStateToProps, {getWeather} ))(App);
