@@ -1,11 +1,11 @@
 import React from 'react';
 
 function LocationSummary(props) {
-  // const { summary } = this.props;
+  const { summary, loading } = props;
 
   return (
       <div>
-        <form className="formZipCode">{props.summary}</form>
+        <p className="locationSummaryText">{ loading ? 'Fetching your local weather' : summary}</p>
       </div>
   );
 }
