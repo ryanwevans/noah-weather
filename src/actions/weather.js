@@ -3,36 +3,20 @@ function getWeather(latitude, longitude) {
     const API_KEY = process.env.REACT_APP_DARK_SKY_API_KEY
     const proxyurl = 'https://cors-anywhere.herokuapp.com/';
     const url = `${API_URL}${API_KEY}/${latitude},${longitude}`
-    // Hard-coded latitude and longitude values for early testing:
+
+    // Hard-coded latitude and longitude values for testing:
     // const url = `${API_URL}${API_KEY}/48.764517,-122.419848`
 
-    console.log('logging from within getWeather')
-    
     return (dispatch) => {
-        console.log('logging from within getWeather')
         dispatch( {type: 'LOADING_WEATHER'} )
         return fetch(proxyurl + url)
         .then(res => res.json())
         .then(weatherData => dispatch( {type: 'FETCH_WEATHER', payload: weatherData} ))
-        // .catch(error => console.log(error))
+        .catch(error => console.log(error))
     }
 }
 
 export default getWeather;
-
-
-// const geolocate = () => {
-//     if (window.navigator && window.navigator.geolocation) {
-//         navigator.geolocation.getCurrentPosition(onGeolocateSuccess, onGeolocateError);
-//     }
-// }
-
-
-// const onGeolocateSuccess = (coordinates) => {
-//     console.log(`${coordinates.coords.latitude}, ${coordinates.coords.longitude}`)
-//     return(coordinates.coords.latitude, coordinates.coords.longitude)
-// }
-
 
 // const onGeolocateError = (error) => {
 //     switch (error.code) {

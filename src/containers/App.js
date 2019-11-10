@@ -25,7 +25,11 @@ class App extends Component {
       <div className="App">
         <nav>Noah</nav>
         <header className="App-header">
-          <LocationSummary loading={this.props.loading} summary={this.props.dailySummary} />
+          { this.props.loading ? 
+            'Fetching Your Local Weather...' : 
+            <LocationSummary loading={this.props.loading} summary={this.props.dailySummary} /> 
+          }
+          
         </header>
           <CurrentWeather currentWeather={this.props.weather} />
           <FutureWeather />
