@@ -5,7 +5,7 @@ function LocationSummary(props) {
 
   return (
       <div>
-        <p className="locationSummaryText">{ summary}</p>
+        <p className="locationSummaryText">{summary}</p>
       </div>
   );
 }

@@ -26,7 +26,8 @@ nav {
   align-items: center; /* aligned items horizontally if flex-direction is Column */
   justify-content: center;
   /* font-variant-caps: all-small-caps; */
-  font-size: calc(8px + 2vmin);
+  font-size: calc(12px + 2vmin);
+  letter-spacing: 1px;
   font-weight: 100;
   color: rgb(203, 239, 250);
 }
@@ -68,7 +69,7 @@ nav {
 }
 
 .currentWeatherBackgroundImage {
-  background-image: url("./images/RainyDay.jpg");
+  /* background-image: url("./images/RainyDay.jpg"); */
   /* height: 660px;  */
   
   background-position: center;
