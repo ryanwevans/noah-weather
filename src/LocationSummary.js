@@ -1,11 +1,11 @@
 import React from 'react';
 
 function LocationSummary(props) {
-  const { summary, loading } = props;
+  const { summary } = props;
 
   return (
       <div>
-        <p className="locationSummaryText">{ loading ? 'Fetching your local weather' : summary}</p>
+        <p className="locationSummaryText">{ summary}</p>
       </div>
   );
 }
