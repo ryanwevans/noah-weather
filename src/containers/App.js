@@ -17,8 +17,10 @@ class App extends Component {
        this.props.getWeather(latitude, longitude);
     })
   }
+
   
   render() {
+    console.log(this.props && this.props.dailyForecast)
     return (
       <div className="App">
         <nav>Noah</nav>
@@ -29,8 +31,14 @@ class App extends Component {
           }
           
         </header>
+        <div className="currentWeatherContainer">
           <CurrentWeather currentWeather={this.props.weather} />
-          <FutureWeather />
+        </div>
+        <div className="App-header"></div>
+        <div className="futureWeatherContainer">
+          <FutureWeather dailyForecast={this.props.dailyForecast} />
+        </div>
+        <div className="App-header"></div>
       </div>
     );
   }
@@ -40,7 +48,8 @@ const mapStateToProps = state => {
   return({
     loading: state.weather.loading,
     weather: state.weather.currentWeather,
-    dailySummary: state.weather.dailySummary
+    dailySummary: state.weather.dailySummary,
+    dailyForecast: state.weather.dailyForecast
   })
 }
 

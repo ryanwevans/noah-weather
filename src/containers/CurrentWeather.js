@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 class CurrentWeather extends Component {
-
+  // Adding '&&' below checks whether variables are defined when page loads; if undefined, will display nothing and then display values when assigned
   render() {
     // Destucture for readability and DRY
     const { 
@@ -23,10 +23,8 @@ class CurrentWeather extends Component {
     const roundedWindSpeed = Math.round(windSpeed)
     const roundedWindGust = Math.round(windGust)
     
-    // const imageUrl = require(`../images/RainyDay.jpg`)
     const imageUrl = icon && require(`../images/${icon}.jpg`)
     return (
-      // Adding '&&' below checks whether variables are defined when page loads; if undefined, will display nothing and then display values when assigned
       <div 
         className="currentWeatherWrapper currentWeatherBackgroundImage"
         style={{ backgroundImage: `url(${imageUrl})` }} 

@@ -2,6 +2,7 @@ export default function weatherReducer( state = {
     loading: false,
     currentWeather: [],
     dailySummary: '',
+    dailyForecast: []
 }, action) {
     switch(action.type) {
         // Allows alternate page view during API loading time
@@ -18,7 +19,8 @@ export default function weatherReducer( state = {
                 ...state,
                 loading: false,
                 currentWeather: action.payload.currently,
-                dailySummary: action.payload.daily.summary
+                dailySummary: action.payload.daily.summary,
+                dailyForecast: action.payload.daily.data[1]
             };
 
         // Must have a default action
