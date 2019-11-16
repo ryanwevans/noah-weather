@@ -30,7 +30,7 @@ class FutureWeather extends Component {
       <div className="futureWeatherWrapper futureWeatherBackgroundImage"
       style={{ backgroundImage: `url(${imageUrl})` }} >
           <div className="futureWeatherHeader">
-            <p>Tomorrow</p>
+            <p>tomorrow's weather</p>
           </div>
           <div className="futureWeatherDescription">
             {summary}
