@@ -28,28 +28,35 @@ class FutureWeather extends Component {
 
     return (
       <div className="futureWeatherWrapper futureWeatherBackgroundImage"
+      // Replace this inline style with a passed variable to css
       style={{ backgroundImage: `url(${imageUrl})` }} >
-          <div className="futureWeatherHeader">
-            <p>tomorrow's weather</p>
-          </div>
-          <div className="futureWeatherDescription">
-            {summary}
-          </div>
-
-          <div className="futureWeatherHigh">
-            <span>High: <br/>{temperatureHigh && roundedTempHigh} &#176;f</span><br/>
+          <div className="futureWeatherHeaderContainer">
+            <div className="futureWeatherHeader">
+              <span>tomorrow's weather</span>
+            </div>
           </div>
 
-          <div className="futureWeatherLow">
-            <span>Low: <br/>{temperatureLow && roundedTempLow} &#176;f</span><br/>
+          <div className="futureWeatherDescriptionContainer">
+            <div className="futureWeatherDescription">
+              {summary}
+            </div>
           </div>
 
-          <div className="futureWeatherDetails">
-            <span>Wind: {windSpeed && roundedWindSpeed} mph</span><br/>
-            <span>Gusts: {windGust && roundedWindGust} mph</span><br/>
-            <span>Feels Like: {apparentTemperature && roundedApparentTemp}&#176;f</span>
-          </div>
+          <div className="futureWeatherHighLowDetailsContainer">
+            <div className="futureWeatherHigh">
+              <span>High: <br/>{temperatureHigh && roundedTempHigh} &#176;f</span><br/>
+            </div>
 
+            <div className="futureWeatherLow">
+              <span>Low: <br/>{temperatureLow && roundedTempLow} &#176;f</span><br/>
+            </div>
+
+            <div className="futureWeatherDetails">
+              <span>Wind: {windSpeed && roundedWindSpeed} mph</span><br/>
+              <span>Gusts: {windGust && roundedWindGust} mph</span><br/>
+              <span>Feels Like: {apparentTemperature && roundedApparentTemp}&#176;f</span>
+            </div>
+          </div>
     </div>
     );
   }
