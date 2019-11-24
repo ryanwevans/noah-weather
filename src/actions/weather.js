@@ -1,7 +1,7 @@
 function getWeather(latitude, longitude) {
     const API_URL = process.env.REACT_APP_DARK_SKY_API_URL
     const API_KEY = process.env.REACT_APP_DARK_SKY_API_KEY
-    // const proxyurl = 'https://cors-anywhere.herokuapp.com/';
+    const proxyurl = 'https://cors-anywhere.herokuapp.com/';
     const url = `${API_URL}${API_KEY}/${latitude},${longitude}`
 
     // Hard-coded latitude and longitude values for testing:
@@ -9,7 +9,12 @@ function getWeather(latitude, longitude) {
 
     return (dispatch) => {
         dispatch( {type: 'LOADING_WEATHER'} )
-        return fetch(url)
+        return fetch(proxyurl + url, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
         .then(res => res.json())
         .then(weatherData => dispatch( {type: 'FETCH_WEATHER', payload: weatherData} ))
         .catch(error => console.log(error))
