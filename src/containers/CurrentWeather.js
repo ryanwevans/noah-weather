@@ -30,9 +30,9 @@ class CurrentWeather extends Component {
         style={{ backgroundImage: `url(${imageUrl})` }} 
         >
         <div className="currentTemp">
-          {temperature && roundedTemp} &#176;f
+          {temperature && roundedTemp}&#176;f
         </div>
-        <div className="currentWeather">
+        <div className="currentWeatherDescriptionContainer">
           <span className="currentWeatherDescription">{summary}</span><br/>
           <span>Wind: {windSpeed && roundedWindSpeed} mph</span><br/>
           <span>Gusts: {windGust && roundedWindGust} mph</span><br/>
