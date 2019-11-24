@@ -7,7 +7,7 @@ class FutureWeather extends Component {
       temperatureHigh,
       temperatureLow, 
       summary, 
-      apparentTemperature, 
+      precipProbability, 
       // Add windBearing as windDirection; windBearing is the direction that the wind is coming from in degrees, with true north at 0° and progressing clockwise.
       windSpeed, 
       windGust,
@@ -15,12 +15,12 @@ class FutureWeather extends Component {
     } = this.props.dailyForecast;
 
     // Logging for reviewing available information to possibly enhance weather info displayed
-    console.log(this.props && this.props.dailyForecast)
+    console.log(this.props && this.props.dailyForecast.precipProbability)
     
     // Round data from two decimal places to whole numbers for display
     const roundedTempHigh = Math.round(temperatureHigh);
     const roundedTempLow = Math.round(temperatureLow);
-    const roundedApparentTemp = Math.round(apparentTemperature);
+    const roundedPrecipProbability = Math.round(precipProbability);
     const roundedWindSpeed = Math.round(windSpeed)
     const roundedWindGust = Math.round(windGust)
     
@@ -54,7 +54,7 @@ class FutureWeather extends Component {
             <div className="futureWeatherDetails">
               <span>Wind: {windSpeed && roundedWindSpeed} mph</span><br/>
               <span>Gusts: {windGust && roundedWindGust} mph</span><br/>
-              <span>Feels Like: {apparentTemperature && roundedApparentTemp}&#176;f</span>
+              <span>Rain: {precipProbability && roundedPrecipProbability}%</span>
             </div>
           </div>
     </div>

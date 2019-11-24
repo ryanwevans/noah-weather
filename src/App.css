@@ -44,14 +44,6 @@ nav {
   justify-content: center;
   font-weight: 100;
   color: rgb(203, 239, 250);
-  /* background-color: #282c34;
-  min-height: 65vh;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  font-weight: 100;
-  color: rgb(203, 239, 250); */
 }
 
 .currentWeatherHeaderContainer {
@@ -93,7 +85,7 @@ nav {
   
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% auto;
   background-color: #2d2d2e;
   background-blend-mode: overlay;
 }
@@ -133,10 +125,10 @@ nav {
 .futureWeatherDescriptionContainer {
   display: flex;
   justify-content: center;
+  padding-top: 5%;
 }
 
 .futureWeatherDescription {
-  padding-top: 2%;
   font-size: 4vw;
   font-weight: 150;
   font-variant-caps: all-small-caps;
@@ -147,26 +139,28 @@ nav {
 .futureWeatherHighLowDetailsContainer {
   display: flex;
   justify-content: center;
-  padding-top: 2%;
+  padding-bottom: 5%;
   margin: auto;
 }
 
 .futureWeatherHigh {
   text-align: left;
   font-size: 7vw;
+  width: 28vw;
   padding-left: 1em;
 }
 
 .futureWeatherLow {
   text-align: left;
   font-size: 7vw;
-  padding-left: 1em;
+  width: 28vw;
 }
 
 .futureWeatherDetails {
   text-align: left;
   font-size: 3.5vw;
-  padding-left: 1em;
+  width: 28vw;
+  padding-top: .5em;
 }
 
 .futureWeatherBackgroundImage {
@@ -175,7 +169,7 @@ nav {
   
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% auto;
   background-color: #2d2d2e;
   background-blend-mode: overlay;
 }
