@@ -110,10 +110,8 @@ nav {
   font-size: calc(20px + 2vmin);
   font-weight: 100;
   font-variant-caps: all-small-caps;
-  /* font-size: calc(30px + 2vmin); */
-  color: rgb(203, 239, 250);
-  /* font-family: 'Petit Formal Script', cursive; */
 }
+
 
 .futureWeatherDescriptionContainer {
   display: flex;
@@ -125,15 +123,20 @@ nav {
   grid-column-end: 5;
   grid-row-start: 3;
   grid-row-end: 4;
-  font-size: calc(40px + 2vmin);
-  font-weight: 200;
+  padding-top: 1%;
+  font-size: 4vw;
+  font-weight: 150;
   font-variant-caps: all-small-caps;
+  color: rgb(112, 171, 187);
 }
+
 
 .futureWeatherHighLowDetailsContainer {
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
+  padding-top: 2%;
+  margin: auto;
 }
 
 .futureWeatherHigh {
@@ -142,7 +145,7 @@ nav {
   grid-row-start: 4;
   grid-row-end: 5;
   text-align: left;
-  font-size: calc(40px + 6vmin);
+  font-size: 7vw;
   padding-left: 1em;
 }
 
@@ -152,7 +155,7 @@ nav {
   grid-row-start: 4;
   grid-row-end: 5;
   text-align: left;
-  font-size: calc(40px + 6vmin);
+  font-size: 7vw;
   padding-left: 1em;
 }
 
@@ -162,16 +165,8 @@ nav {
   grid-row-start: 4;
   grid-row-end: 5;
   text-align: left;
-  font-size: calc(30px + 2vmin);
+  font-size: 4.2vw;
   padding-left: 1em;
-}
-
-.futureTemp {
-  font-size: calc(60px + 2vmin);
-}
-
-.degreesFarenheit {
-  font-size: calc(18px + 2vmin);
 }
 
 .futureWeatherBackgroundImage {
@@ -189,21 +184,3 @@ nav {
   background-color: #333436;
   z-index: -1;
 }
-
-/* .futureForecastWrapper {
-  background-color: #282c34;
-  min-height: 20vh;
-  min-width: 100%;
-  display: flex;
-  flex-direction: row; */
-  /* aligned items horizontally if flex-direction is Column */
-  /* align-items: center; 
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  font-weight: 100;
-  color: rgb(203, 239, 250);
-}
-
-.futureForecast span {
-  margin: 5px;
-} */
