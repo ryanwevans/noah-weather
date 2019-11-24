@@ -86,22 +86,10 @@ nav {
 
 
 /* FutureWeather styles */
-/* .futureWeatherContainer {
-  display: grid;
-  grid-template-columns: 40px 50px auto 50px 40px;
-  grid-template-rows: 25% 100px auto;
-} */
 
 .futureWeatherWrapper {
-  /* display: flex;
-  justify-content: space-around; */
-  /* display: grid;
-  grid-template-columns: 10% auto auto auto 10%;
-  grid-template-rows: 15% 5% auto auto 30%; */
   background-color: #282c34;
   min-height: 65vh;
-  /* display: flex;
-  flex-direction: row; */
   align-items: center; /* aligned items horizontally if flex-direction is Column */
   justify-content: center;
   font-size: calc(20px + 2vmin);
