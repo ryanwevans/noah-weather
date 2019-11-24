@@ -18,7 +18,7 @@ nav {
   font-family: 'Petit Formal Script', cursive;
 }
 
-.App-header {
+.app-header-footer {
   background-color: #282c34;
   min-height: 10vh;
   display: flex;
@@ -31,9 +31,12 @@ nav {
   color: rgb(203, 239, 250);
 }
 
-.App-link {
-  color: #09d3ac;
+.footer-attribute {
+  font-size: 1.5vw;
 }
+
+
+/* Current Weather Styles */
 
 .currentWeatherWrapper {
   background-color: #282c34;
