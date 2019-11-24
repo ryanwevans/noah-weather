@@ -29,15 +29,27 @@ class CurrentWeather extends Component {
         className="currentWeatherWrapper currentWeatherBackgroundImage"
         style={{ backgroundImage: `url(${imageUrl})` }} 
         >
-        <div className="currentTemp">
-          {temperature && roundedTemp}&#176;f
+        
+        <div className="currentWeatherHeaderContainer">
+          <div className="currentWeatherHeader">
+            <span>current weather</span>
+          </div>
         </div>
+        
+
         <div className="currentWeatherDescriptionContainer">
-          <span className="currentWeatherDescription">{summary}</span><br/>
-          <span>Wind: {windSpeed && roundedWindSpeed} mph</span><br/>
-          <span>Gusts: {windGust && roundedWindGust} mph</span><br/>
-          <span>Feels Like: {apparentTemperature && roundedApparentTemp}&#176;f</span>
+          <div className="currentTemp">
+            {temperature && roundedTemp}&#176;f
+          </div>
+
+          <div className="currentWeatherDescription">
+            <span>{summary}</span><br/>
+            <span>Wind: {windSpeed && roundedWindSpeed} mph</span><br/>
+            <span>Gusts: {windGust && roundedWindGust} mph</span><br/>
+            <span>Feels Like: {apparentTemperature && roundedApparentTemp}&#176;f</span>
+          </div>
         </div>
+
       </div>
     );
   }

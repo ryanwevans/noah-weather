@@ -2,10 +2,6 @@
   text-align: center;
 }
 
-/* .App-logo {
-  height: 40vmin;
-} */
-
 nav {
   background-color: #282c34;
   min-height: 5vh;
@@ -39,28 +35,54 @@ nav {
 /* Current Weather Styles */
 
 .currentWeatherWrapper {
+  display: flex;
+  flex-direction: column;
   background-color: #282c34;
+  height: 80vh;
+  min-height: 65vh;
+  align-items: center;
+  justify-content: center;
+  font-weight: 100;
+  color: rgb(203, 239, 250);
+  /* background-color: #282c34;
   min-height: 65vh;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   font-weight: 100;
-  color: rgb(203, 239, 250);
+  color: rgb(203, 239, 250); */
+}
+
+.currentWeatherHeaderContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.currentWeatherHeader {
+  font-size: 3vw;
+  font-weight: 100;
+  font-variant-caps: all-small-caps;
 }
 
 .currentWeatherDescriptionContainer {
+  display: flex;
+  justify-content: center;
   text-align: left;
   font-size: 2.5vw;
   padding-left: 1em;
 }
 
 .currentWeatherDescription {
+  padding-top: 1em;
+  text-align: left;
+  padding-left: 1em;
   font-weight: 200;
   font-variant-caps: all-small-caps;
 }
 
 .currentTemp {
+  
   font-size: 14vw;
   font-weight: .5;
 }
@@ -85,7 +107,10 @@ nav {
 /* FutureWeather styles */
 
 .futureWeatherWrapper {
+  display: flex;
+  flex-direction: column;
   background-color: #282c34;
+  height: 80vh;
   min-height: 65vh;
   align-items: center;
   justify-content: center;
@@ -99,10 +124,6 @@ nav {
 }
 
 .futureWeatherHeader {
-  grid-column-start: 2;
-  grid-column-end: 5;
-  grid-row-start: 1;
-  grid-row-end: 2;
   font-size: 3vw;
   font-weight: 100;
   font-variant-caps: all-small-caps;
@@ -115,10 +136,6 @@ nav {
 }
 
 .futureWeatherDescription {
-  grid-column-start: 2;
-  grid-column-end: 5;
-  grid-row-start: 3;
-  grid-row-end: 4;
   padding-top: 2%;
   font-size: 4vw;
   font-weight: 150;
@@ -129,37 +146,24 @@ nav {
 
 .futureWeatherHighLowDetailsContainer {
   display: flex;
-  justify-content: space-around;
-  align-items: baseline;
+  justify-content: center;
   padding-top: 2%;
   margin: auto;
 }
 
 .futureWeatherHigh {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 4;
-  grid-row-end: 5;
   text-align: left;
   font-size: 7vw;
   padding-left: 1em;
 }
 
 .futureWeatherLow {
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 4;
-  grid-row-end: 5;
   text-align: left;
   font-size: 7vw;
   padding-left: 1em;
 }
 
 .futureWeatherDetails {
-  grid-column-start: 4;
-  grid-column-end: 5;
-  grid-row-start: 4;
-  grid-row-end: 5;
   text-align: left;
   font-size: 3.5vw;
   padding-left: 1em;

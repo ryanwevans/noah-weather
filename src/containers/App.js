@@ -34,7 +34,7 @@ class App extends Component {
         <div className="currentWeatherContainer">
           <CurrentWeather currentWeather={this.props.weather} />
         </div>
-        <div className="app-header"></div>
+        <div className="app-header-footer"></div>
         <div className="futureWeatherContainer">
           <FutureWeather dailyForecast={this.props.dailyForecast} />
         </div>
