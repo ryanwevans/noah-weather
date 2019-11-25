@@ -32,7 +32,7 @@ class FutureWeather extends Component {
       style={{ backgroundImage: `url(${imageUrl})` }} >
           <div className="futureWeatherHeaderContainer">
             <div className="futureWeatherHeader">
-              <span>tomorrow's weather</span>
+              {/* <span>tomorrow's weather</span> */}
             </div>
           </div>
 

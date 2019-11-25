@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-nav {
+.title {
   background-color: #282c34;
   min-height: 5vh;
   display: flex;
@@ -39,7 +39,7 @@ nav {
   flex-direction: column;
   background-color: #282c34;
   height: 80vh;
-  min-height: 65vh;
+  min-height: 30vh;
   align-items: center;
   justify-content: center;
   font-weight: 100;
@@ -80,12 +80,10 @@ nav {
 }
 
 .currentWeatherBackgroundImage {
-  /* background-image: url("./images/RainyDay.jpg"); */
-  /* height: 660px;  */
-  
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  /* background-size: 100% auto; */
+  background-size: cover;
   background-color: #2d2d2e;
   background-blend-mode: overlay;
 }
@@ -103,7 +101,7 @@ nav {
   flex-direction: column;
   background-color: #282c34;
   height: 80vh;
-  min-height: 65vh;
+  min-height: 30vh;
   align-items: center;
   justify-content: center;
   font-weight: 100;
@@ -116,7 +114,7 @@ nav {
 }
 
 .futureWeatherHeader {
-  font-size: 3vw;
+  font-size: 2.5vw;
   font-weight: 100;
   font-variant-caps: all-small-caps;
 }
@@ -141,24 +139,26 @@ nav {
   justify-content: center;
   padding-bottom: 5%;
   margin: auto;
+  color: rgb(127, 195, 214);
 }
 
 .futureWeatherHigh {
   text-align: left;
-  font-size: 7vw;
+  font-size: 5vw;
   width: 28vw;
-  padding-left: 1em;
+  padding-left: 2em;
 }
 
 .futureWeatherLow {
   text-align: left;
-  font-size: 7vw;
+  font-size: 5vw;
   width: 28vw;
 }
 
 .futureWeatherDetails {
   text-align: left;
-  font-size: 3.5vw;
+  font-size: 2.8vw;
+  font-weight: 200;
   width: 28vw;
   padding-top: .5em;
 }
@@ -169,7 +169,8 @@ nav {
   
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  /* background-size: 100% auto; */
+  background-size: cover;
   background-color: #2d2d2e;
   background-blend-mode: overlay;
 }

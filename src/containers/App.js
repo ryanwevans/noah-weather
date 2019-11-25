@@ -23,7 +23,7 @@ class App extends Component {
     console.log(this.props && this.props.dailyForecast)
     return (
       <div className="App">
-        <nav>Noah</nav>
+        <nav className="title">Noah</nav>
         <header className="app-header-footer">
           { this.props.dailySummary ? 
             <LocationSummary loading={this.props.loading} summary={this.props.dailySummary} /> :
@@ -35,6 +35,9 @@ class App extends Component {
           <CurrentWeather currentWeather={this.props.weather} />
         </div>
         <div className="app-header-footer"></div>
+        <div className="app-header-footer futureWeatherHeader">
+          <span>tomorrow's weather</span>
+        </div>
         <div className="futureWeatherContainer">
           <FutureWeather dailyForecast={this.props.dailyForecast} />
         </div>
