@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import '../App.css';
 import LocationSummary from '../LocationSummary';
-import CurrentWeather from './CurrentWeather';
+import CurrentWeather from '../components/CurrentWeather';
 import FutureWeather from '../components/FutureWeather';
 
 import getWeather from '../actions/weather'

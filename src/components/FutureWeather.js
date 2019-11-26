@@ -8,7 +8,7 @@ class FutureWeather extends Component {
       temperatureLow, 
       summary, 
       precipProbability, 
-      // Add windBearing as windDirection; windBearing is the direction that the wind is coming from in degrees, with true north at 0° and progressing clockwise.
+      // Improvement opportunity: add windBearing as windDirection; windBearing is the direction that the wind is coming from in degrees, with true north at 0° and progressing clockwise.
       windSpeed, 
       windGust,
       icon
@@ -16,6 +16,8 @@ class FutureWeather extends Component {
 
     // Logging for reviewing available information to possibly enhance weather info displayed
     console.log(this.props && this.props.dailyForecast.precipProbability)
+    const time = Math.floor(Date.now() / 1000)
+    console.log(time)
     
     // Round data from two decimal places to whole numbers for display
     const roundedTempHigh = Math.round(temperatureHigh);
@@ -28,13 +30,8 @@ class FutureWeather extends Component {
 
     return (
       <div className="futureWeatherWrapper futureWeatherBackgroundImage"
-      // Replace this inline style with a passed variable to css
+      // Improvement Opportunity: replace this inline style with a passed variable/attr to css
       style={{ backgroundImage: `url(${imageUrl})` }} >
-          <div className="futureWeatherHeaderContainer">
-            <div className="futureWeatherHeader">
-              {/* <span>tomorrow's weather</span> */}
-            </div>
-          </div>
 
           <div className="futureWeatherDescriptionContainer">
             <div className="futureWeatherDescription">

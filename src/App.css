@@ -1,3 +1,5 @@
+/* APP/MAIN STYLES */
+
 .App {
   text-align: center;
 }
@@ -32,7 +34,7 @@
 }
 
 
-/* Current Weather Styles */
+/* CURRENT WEATHER STYLES */
 
 .currentWeatherWrapper {
   display: flex;
@@ -94,7 +96,7 @@
 }
 
 
-/* FutureWeather styles */
+/* FUTURE WEATHER STYLES */
 
 .futureWeatherWrapper {
   display: flex;
@@ -118,7 +120,6 @@
   font-weight: 100;
   font-variant-caps: all-small-caps;
 }
-
 
 .futureWeatherDescriptionContainer {
   display: flex;
@@ -164,12 +165,8 @@
 }
 
 .futureWeatherBackgroundImage {
-  /* background-image: url("./images/RainyDay.jpg"); */
-  /* height: 660px;  */
-  
   background-position: center;
   background-repeat: no-repeat;
-  /* background-size: 100% auto; */
   background-size: cover;
   background-color: #2d2d2e;
   background-blend-mode: overlay;

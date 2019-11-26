@@ -8,7 +8,7 @@ class CurrentWeather extends Component {
       temperature, 
       summary, 
       apparentTemperature, 
-      // Add windBearing as windDirection; windBearing is the direction that the wind is coming from in degrees, with true north at 0° and progressing clockwise.
+      // Improvement Opportunity: Add windBearing as windDirection; windBearing is the direction that the wind is coming from in degrees, with true north at 0° and progressing clockwise.
       windSpeed, 
       windGust,
       icon
