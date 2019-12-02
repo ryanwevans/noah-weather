@@ -5,6 +5,7 @@ class FutureWeather extends Component {
     // Destucture for readability and DRY
     const { 
       temperatureHigh,
+      apparentTemperatureHigh,
       temperatureLow, 
       summary, 
       precipProbability, 
@@ -21,6 +22,7 @@ class FutureWeather extends Component {
     
     // Round data from two decimal places to whole numbers for display
     const roundedTempHigh = Math.round(temperatureHigh);
+    const roundedApparentTempHigh = Math.round(apparentTemperatureHigh);
     const roundedTempLow = Math.round(temperatureLow);
     const roundedPrecipProbability = Math.round(precipProbability);
     const roundedWindSpeed = Math.round(windSpeed)
@@ -51,6 +53,7 @@ class FutureWeather extends Component {
             <div className="futureWeatherDetails">
               <span>Wind: {windSpeed && roundedWindSpeed} mph</span><br/>
               <span>Gusts: {windGust && roundedWindGust} mph</span><br/>
+              <span>Wind Chill: {apparentTemperatureHigh && roundedApparentTempHigh} &#176;f</span><br/>
               <span>Rain: {precipProbability && roundedPrecipProbability}%</span>
             </div>
           </div>
